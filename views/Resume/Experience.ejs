@@ -1,0 +1,40 @@
+<%- include('../../partials/header')%>
+
+    <div class="education-container  ">
+
+        <h1 class="fs-3 p-2 w-25 alert alert-success text-center mt-3">EXPERIENCE</h1>
+        
+        <div class="education-form w-100 ps-5 ">
+            <img  style="height: 16em;" src="./images/frantedimg/experience-img.png" alt="">
+
+            <form action="/add-experience" method="post" class="signin-box container">
+
+                <input class="form-control   fs-5 me-2 " type="text" placeholder="Companyname" name="companyname">
+                <input class="form-control  fs-5 me-2" type="text" placeholder="Designation" name="designation">
+                <input class="form-control  fs-5 me-2" type="text" placeholder="Duration" name="duration">
+               
+             <button class=" btn btn-primary fs-5">ADD</button>
+            </form>
+        </div>
+    </div>
+
+    <hr>
+    <div class="d-flex flex-wrap ms-2">
+        <% user.experience.forEach((ex, i)=> { %>
+            <div class="card me-3 mb-3" style="width: 18rem">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        Companyname -  <%= ex.companyname %>
+                    </h5>
+                    <h6 class="card-subtitle  text-muted">
+                        Designation :- <%= ex.designation%> 
+                    </h6>
+                    <h6 class="card-text">Duration - <%= ex.duration %>
+                    </h6>
+                    <a href="/delete-experience/<%= i%>" class="card-link">Remove</a>
+                </div>
+            </div>
+            <% })%>
+    </div>
+
+    <%- include('../../partials/footer')%>

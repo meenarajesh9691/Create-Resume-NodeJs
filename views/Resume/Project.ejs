@@ -1,0 +1,40 @@
+<%- include('../../partials/header')%>
+
+    <div class="education-container  ">
+
+        <h1 class="fs-3 p-2 w-25 alert alert-success text-center mt-3">PROJECT</h1>
+        
+        <div class="education-form w-100 ps-5 ">
+            <img  style="height: 14em;" src="./images/frantedimg/project-img.png" alt="">
+
+            <form action="/add-project" method="post" class="signin-box container">
+
+                <input class="form-control   fs-5 me-2 " type="text" placeholder="Title" name="title">
+                <input class="form-control  fs-5 me-2" type="text" placeholder="Description" name="description">
+                <input class="form-control  fs-5 me-2" type="text" placeholder="Technology" name="technology">
+                <input class="form-control  fs-5 me-2" type="text" placeholder="Link" name="link">
+             <button class=" btn btn-primary fs-5">ADD</button>
+            </form>
+        </div>
+    </div>
+
+    <hr>
+    <div class="d-flex flex-wrap ms-2">
+        <% user.project.forEach((p, i)=> { %>
+            <div class="card me-3 mb-3" style="width: 18rem">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        Title -  <%= p.title%>
+                    </h5>
+                    <h6 class="card-subtitle  text-muted">
+                        Description :- <%= p.description%>| Technology :- <%= p.technology %>  
+                    </h6>
+                    <h6 class="card-text">Link - <a href=""><%= p.link %></a>
+                    </h6>
+                    <a href="/delete-project/<%= i%>" class="card-link">Remove</a>
+                </div>
+            </div>
+            <% })%>
+    </div>
+
+    <%- include('../../partials/footer')%>

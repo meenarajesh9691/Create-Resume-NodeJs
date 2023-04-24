@@ -1,0 +1,25 @@
+<%- include('../partials/header')%>
+    <section>
+        <div class="form-container mt-4 container">
+            <img style="height: 30.5em;" src="/images/frantedimg/3d-img.png" alt="">
+
+
+            <div class="form-box ">
+                <form action="/signup" method="post">
+                    <h1 class="mb-4">Signup</h1>
+                    <input class="form-control  pe-5 fs-5 " type="text" placeholder="username" name="username"><br>
+                    <input class="form-control  pe-5 fs-5 " type="text" placeholder="email" name="email"><br>
+                    <input class="form-control  pe-5 fs-5 " type="password" placeholder="password" name="password"><br>
+                    <input class="form-control  pe-5 fs-5 " type="text" placeholder="contact" name="contact"><br>
+
+                    <button class="form-btn btn btn-primary m-1">Create Account</button><br>
+                    <p>Already have an account?</p>
+                    <a href="/signin">Sign in</a>
+                </form>
+            </div>
+        </div>
+
+    </section>
+    </div>
+
+    <%- include('../partials/footer')%>

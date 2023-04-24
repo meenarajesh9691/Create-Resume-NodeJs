@@ -1,0 +1,19 @@
+<%- include('../partials/header')%>
+    <section>
+        <div class="form-container">
+            <div class="otp-verification">
+                <img  src="/images/frantedimg/otp-img.png" alt="">
+                
+            </div>
+            <div class="form-box p-5 mt-5">
+                <form action="/otp/<%=user._id%>" method="post" class="login-box">
+                    <input class="form-control  pe-5 fs-5 " type="text" placeholder="Enter OTP" name="otp"><br>
+                    <button class="form-btn btn btn-primary m-2">Send</button>
+                </form>
+
+            </div>
+        </div>
+    </section>
+    </div>
+
+    <%- include('../partials/footer')%>

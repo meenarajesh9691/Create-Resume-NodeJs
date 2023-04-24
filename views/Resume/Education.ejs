@@ -1,0 +1,40 @@
+<%- include('../../partials/header')%>
+
+    <div class="education-container  ">
+
+        <h1 class="fs-3 p-2 w-25 alert alert-success text-center mt-3">EDUCATION</h1>
+        
+        <div class="education-form w-100 ps-5 ">
+            <img  style="height: 16em;" src="./images/frantedimg/education-img.png" alt="">
+
+            <form action="/add-edu" method="post" class="signin-box container">
+
+                <input class="form-control   fs-5 me-2 " type="text" placeholder="Institute Name" name="institute">
+                <input class="form-control  fs-5 me-2" type="text" placeholder="University Name" name="university">
+                <input class="form-control  fs-5 me-2" type="text" placeholder="Year" name="year">
+                <input class="form-control  fs-5 me-2" type="text" placeholder="Grade/Percentage" name="grade">
+             <button class=" btn btn-primary fs-5">ADD</button>
+            </form>
+        </div>
+    </div>
+
+    <hr>
+    <div class="d-flex flex-wrap ms-2">
+        <% user.education.forEach((e, i)=> { %>
+            <div class="card me-3 mb-3" style="width: 18rem">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <%= e.degree%>
+                    </h5>
+                    <h6 class="card-subtitle mb-2 text-muted">
+                        <%= e.institute%> - <%= e.year%> | <%= e.university%>
+                    </h6>
+                    <p class="card-text">CGPA/PERCENTAGE <%= e.grade%>
+                    </p>
+                    <a href="/delete-edu/<%= i%>" class="card-link">Remove</a>
+                </div>
+            </div>
+            <% })%>
+    </div>
+
+    <%- include('../../partials/footer')%>

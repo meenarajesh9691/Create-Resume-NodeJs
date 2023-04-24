@@ -1,0 +1,327 @@
+/* body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+/* ---------Home Page--------- */
+
+.main-container {
+  width: 100%;
+  height: 91vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  /* background-color: #aabdbb; */
+  /* background-color: #F4F9F4; */
+  background-color: #CBE4DE;
+  padding: 0 100px;
+}
+
+.main-container img {
+  height: 34.9rem;
+}
+.nav-container{
+
+  background-color: #0E8388;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: white;
+  width: 20%;
+
+}
+
+.logo a {
+  text-decoration: none;
+  color: white;
+}
+
+.logo a h1 {
+
+  font-size: 25px;
+}
+
+.logo a:hover {
+  color: #045a40;
+  transition: 0.2s linear;
+}
+
+.nav-right {
+  width: 70%;
+}
+
+.nav-right ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.nav-right ul a {
+  text-decoration: none;
+}
+
+#home {
+  color: #F2D1A8;
+  font-weight: 400;
+
+}
+
+.nav-right ul li {
+  list-style: none;
+  color: #F4F9F4;
+  font-weight: 400;
+  font-size: 22px;
+  transition: 0.2s linear;
+}
+
+.nav-right ul li:hover {
+  color: #2C3333;
+
+}
+
+
+
+
+.content h1 {
+  font-size: 45px;
+  color: #2E4F4F;
+}
+
+
+.content button {
+  padding: 10px 15px;
+  font-size: 25px;
+  border-radius: 10px;
+  margin-top: 20px;
+  color: #2C3333;
+  background-color: #ffffff;
+  border: none;
+  box-shadow: 0 0 5px black;
+  transition: 0.2s linear;
+  cursor: pointer;
+}
+
+.content button:hover {
+  color: white;
+  background-color: #0E8388;
+}
+
+/* -----------Homepage End-------- */
+
+/* --------signin / signup section----------  */
+
+.form-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  /* background-color: #fbb03b; */
+
+
+}
+
+
+.signin-img {
+  display: flex;
+}
+
+
+.form-box {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 10px;
+  margin-top: 8px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 0 10px rgb(103, 103, 103);
+
+}
+
+/* ------------------------------------- */
+
+
+/* ------profile------ */
+
+.container{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.profileImg{
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border: 2px solid grey;
+}
+.profile-form{
+  background-color: white;
+  box-shadow: 0 0 10px black;
+  padding: 10px 40px;
+}
+
+
+/* -------------create---------------- */
+.list-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: -20px 400px 50px 400px;
+  box-shadow: 0 0 10px black;
+}
+.heading{
+  position: absolute;
+  top: 20px;
+}
+.list-btn1{
+  background-color: #6b988b;
+  padding: 5px 40px;
+  border-radius: 5px;
+  transition: .2s linear;
+  color: white;
+
+}
+.list-btn1:hover{
+  
+  background-color: #045a40;
+}
+
+.list-btn2{
+  background-color: #6b988b;
+  padding: 5px 70px;
+  border-radius: 5px;
+  color: white;
+  transition: .2s linear;
+
+}
+.list-btn2:hover{
+   background-color: #045a40;
+}
+
+.list-btn3{
+  background-color: #6b988b;
+  padding: 5px 55px;
+  border-radius: 5px;
+  color: white;
+  transition: .2s linear;
+
+}
+.list-btn3:hover{
+   background-color: #045a40;
+}
+
+.list-btn4{
+  background-color: #6b988b;
+  padding: 5px 35px;
+  border-radius: 5px;
+  color: white;
+  transition: .2s linear;
+
+}
+.list-btn4:hover{
+   background-color: #045a40;
+}
+
+.list-btn5{
+  background-color: #6b988b;
+  padding: 5px 50px;
+  border-radius: 5px;
+  color: white;
+  transition: .2s linear;
+
+}
+.list-btn5:hover{
+   background-color: #045a40;
+}
+
+.education-container{
+margin: 0 10px;
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+align-items: center;
+}
+
+.education-form{
+  /* height: 40vh; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 10px black;
+}
+/* -----------CV Resume------------ */
+
+.cv-container{
+  padding:50px 200px;
+}
+.row{
+  box-shadow: 0 0 10px black;
+}
+
+.pro-img{
+  text-align: center;
+  margin-top: 10px;
+
+}
+.left-box{
+  background-color: #fbb03b;
+}
+.content-left{
+  color:white;
+}
+.content-left h2 {
+  font-size: 20px;
+}
+.right-box{
+  background-color: white;
+}
+.right-box h1 {
+  color: black;
+  text-transform: uppercase;
+  margin-bottom: 2vmax;
+}
+.content-right h2 {
+  color: black;
+}
+.view-btn{
+  position:absolute;
+  left: 5vmax;
+  top: 10vmax;
+}
+#print-btn{
+  margin-bottom: 10px;
+}
+.right-content{
+  width: 100%;
+  height: 100%;
+  background-color: aquamarine;
+}

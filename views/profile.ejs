@@ -1,0 +1,76 @@
+<%- include('../partials/header')%>
+
+
+   <div class="container mt-5">
+
+      <div class=" text-center w-50">
+         <img class="profileImg" src="/images/<%=user.avatar%>"
+            alt="">
+
+         <form action="/upload" method="post" enctype="multipart/form-data">
+            <input class="d-none uploadImg" type="file" name="avatar">
+            <button class="btn btn-success mt-1 " style="width: 200px;">Upload Image</button>
+         </form>
+
+         <div>
+            <h1 class="fs-1 fw-light">
+               <%= user.username%>
+            </h1>
+            <h3 class="fs-4 fw-light">
+               <%= user.email%>
+            </h3>
+            <p>
+               <small class="text-muted">
+                  <a class="text-decoration-none text-dark fs-3" href="<%= user.links.linkedin%>"><i
+                        class="ri-linkedin-box-fill"></i></a>
+
+                  <a class="text-decoration-none text-dark fs-3 ms-3" href="<%= user.links.github%>"><i
+                        class="ri-github-fill"></i></a>
+
+                  <a class="text-decoration-none text-dark fs-3 ms-3" href="<%= user.links.behance%>"><i
+                        class="ri-behance-fill"></i></a>
+               </small>
+            </p>
+         </div>
+
+         <a href="/signin"> <button class="btn btn-primary"> Signout</button></a>
+         <a href="/resetpassword/<%=user._id%>"> <button class="btn btn-primary"> Reset password </button> </a>
+
+
+      </div>
+
+      <div class="profile-form w-50 mt-2 p-3">
+         <form action="/update/<%= user._id%>" method="POST">
+            <label class=" alert alert-danger w-100 p-2 fs-5" for="">Personal Information</label>
+            <input class="mb-2 form-control " type="text" placeholder="username" name="username"
+               value="<%= user.username%>" />
+            <input class="mb-2 form-control " type="email" placeholder="email" name="email" value="<%= user.email%>" />
+
+            <input class="mb-2 form-control " type="text" placeholder="contact" name="contact"
+               value="<%= user.contact%>" />
+
+            <label class="mb-2 alert alert-danger w-100 p-2 fs-5" for="">Links</label>
+            <input  class=" mb-2 form-control " type="url" placeholder="https://linkedin.com" name="linkedin"
+               value="<%= user.links.linkedin%>" />
+            <input class="mb-2 form-control " type="url" placeholder="https://github.com" name="github"
+               value="<%= user.links.github%>" />
+            <input class="mb-2 form-control " type="url" placeholder="https://behance.com" name="behance"
+               value="<%= user.links.behance%>" />
+
+            <button class="btn btn-success mt-3">Update User Information</button>
+         </form>
+        
+        
+      </div>
+   </div>
+  
+   <script>
+      const profileImg = document.querySelector(".profileImg");
+      const uploadImg = document.querySelector(".uploadImg");
+      profileImg.addEventListener("click", () => {
+         console.log("hi");
+         uploadImg.click();
+      });
+
+   </script>
+   <%- include('../partials/footer')%>

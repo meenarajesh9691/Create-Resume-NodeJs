@@ -1,0 +1,29 @@
+{
+    "education":[
+        {
+            "institute": "",
+            "university": "",
+            "year": "",
+            "degree": "",
+            "grade": ""
+        }
+    ],
+    "skill": ["UI UX DESIGNER", "FULL STACK DEVELOPER"],
+    "project": [
+        {
+            "title": "",
+            "description": "",
+            "technology": "",
+            "link": ""
+        }
+    ],
+    "experience": [
+        {
+            "companyname": "",
+            "designation": "",
+            "duration": ""
+        }
+    ],
+    "interest": ["reading", "traveling"]
+
+}

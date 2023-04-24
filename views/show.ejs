@@ -1,0 +1,215 @@
+<%- include('../partials/header')%>
+  <!DOCTYPE html>
+  <html>
+
+  <head>
+    <title>User 👤 | <%= title %>
+    </title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+  </head>
+
+  <body>
+    <div class="cv-container ">
+      <page size="A4">
+        <div class="row resume">
+          <div class="col-md-4 left-box  ">
+            <!-- left col  -->
+            <div class="pro-img mt-5">
+              <img height="150px" width="150px" style="object-fit: cover; border-radius: 50%; "
+                src="/images/<%= data.avatar%>" alt="" />
+
+            </div>
+            <div class="text-center p-2 alert alert-success mt-4 ">
+              <h4>Personal Information</h4>
+            </div>
+            <div class="content-left mt-2">
+
+              <h2>Name :- <%=data.username%>
+              </h2>
+              <h2>Email :- <%=data.email%>
+              </h2>
+              <h2>Contact :- <%=data.contact%>
+              </h2>
+
+
+              <div class="text-center p-1 alert alert-danger mt-5 ">
+                <h4>Importaint Links</h4>
+              </div>
+
+              <h2>LinkedIn :-<a href="<%= data.links.linkedin%>">
+                  <%= data.links.linkedin%>
+                </a></h2>
+              <h2>GitHub :-<a href="<%=data.links.github%>">
+                  <%=data.links.github%>
+                </a>
+              </h2>
+              <h2>Behance :-<a href="<%=data.links.behance%>">
+                  <%=data.links.behance%>
+                </a>
+              </h2>
+
+            </div>
+          </div>
+          <!-- right col  -->
+          <div class="col-md-8 right-box">
+            <h1 class="text-center mt-2 fs-2 ">
+              <%=data.username%>
+            </h1>
+            <h3 class=" p-2 alert alert-warning mt-2 text-center">Professinal Information</h3> <br>
+
+            <!------- Education------ -->
+            <div class="fs-5">
+              <h4 class=" alert alert-dark p-1">Education </h4>
+              <% data.education.forEach((e, i)=> { %>
+                <ul>
+
+                  <li>
+                    <span class="text-primary"> Institute :-</span>
+                    <%= e.institute%>
+                  </li>
+                  <li>
+                    <span class="text-primary">University :-</span>
+                    <%= e.university%>
+                  </li>
+                  <li>
+                    <span class="text-primary">Year :-</span>
+                    <%= e.year%>
+                  </li>
+                  <li>
+                    <span class="text-primary">Degree :-</span>
+                    <%= e.degree%>
+                  </li>
+
+
+                  <li> <span class="text-primary">CGPA/PERCENTAGE :-</span>
+                    <%= e.grade%>
+                  </li>
+                </ul>
+                <% })%>
+            </div>
+
+            <!-- ---------------------- -->
+
+
+            <!-- -----Skill ------- -->
+            <div class="fs-5 ">
+              <h4 class=" alert alert-dark p-1 "> Skills </h4>
+              <% data.skill.forEach((s,i)=>{ %>
+                <ul class="mb-1">
+                  <li class="mb-0 ">
+                    <%= s.skill%>
+                  </li>
+                </ul>
+                <%})%>
+
+            </div>
+            <!-- ----------------- -->
+
+
+            <!-- ----Project---- -->
+
+            <div class="fs-5">
+              <h4 class=" alert alert-dark p-1">Project </h4>
+              <% data.project.forEach((p, i)=> { %>
+                <ul>
+
+                  <li>
+                    <span class="text-primary"> Title :-</span>
+                    <%= p.title%>
+                  </li>
+                  <li>
+                    <span class="text-primary"> Description :-</span>
+                    <%= p.description%>
+                  </li>
+                  <li>
+                    <span class="text-primary">Technology :-</span>
+                    <%= p.technology%>
+                  </li>
+                  <li>
+                    <span class="text-primary">Link :-</span>
+                    <%= p.link%>
+                  </li>
+
+
+                </ul>
+                <% })%>
+            </div>
+
+            <!-- ---------- --------->
+
+
+
+            <!-- ----- Experience----- -->
+            <div class="fs-5 ">
+              <h4 class=" alert alert-dark p-1 "> Experience </h4>
+              <% data.experience.forEach((ex,i)=>{ %>
+                <ul>
+                  <li class="fs-5 ">
+                    <%= ex.companyname%>
+                  </li>
+                  <li class="fs-5 ">
+                    <%= ex.designation%>
+                  </li>
+                  <li class="fs-5 ">
+                    <%= ex.duration%>
+                  </li>
+                </ul>
+                <%})%>
+
+            </div>
+
+            <!-- --------- -->
+
+
+            <!-- Interest------ -->
+
+            <div class="fs-5 ">
+              <h4 class=" alert alert-dark p-1 ">Interest</h4>
+              <% data.interest.forEach((int,i)=>{ %>
+                <ul class="mb-1">
+                  <li class="mb-0 ">
+                    <%= int.interest%>
+                  </li>
+                </ul>
+                <%})%>
+
+            </div>
+            <!-- -------------- -->
+
+
+
+          </div>
+      </page>
+
+    </div>
+    <div class="text-center">
+      <button class="printbtn mt-5 btn btn-success btn-lg">Print</button>
+    </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2017.1.223/styles/kendo.common.min.css" />
+    <script src="https://kendo.cdn.telerik.com/2017.1.223/js/jszip.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2017.1.223/js/kendo.all.min.js"></script>
+
+    <script>
+      function getPDF(selector) {
+        kendo.drawing.drawDOM($(selector)).then(function (group) {
+          kendo.drawing.pdf.saveAs(group, "testing.pdf");
+        });
+      }
+    </script>
+    <script type="text/javascript">
+      $(".printbtn").click(function () {
+        getPDF(".resume");
+      });
+    </script>
+
+  </body>
+
+  </html>
+
+  <%- include('../partials/footer')%>

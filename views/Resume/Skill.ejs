@@ -1,0 +1,36 @@
+
+
+    <%- include('../../partials/header')%>
+
+    <div class="education-container  ">
+
+        <h1 class="fs-3 p-2 w-25 alert alert-success text-center mt-3">SKILLS</h1>
+        
+        <div class="education-form w-100 ps-5 ">
+            <img  style="height: 14em;" src="./images/frantedimg/skill-img.png" alt="">
+
+            <form action="/add-skill" method="post" class="signin-box container">
+                <textarea  cols="100" rows="5"  name="skill"  placeholder="Enter Skills"></textarea>
+            
+             <button class=" btn btn-primary fs-5">ADD</button>
+            </form>
+        </div>
+    </div>
+
+    <hr>
+    <div class="d-flex flex-wrap ms-2">
+        <% user.skill.forEach((s, i)=> { %>
+            <div class="card me-3 mb-3" style="width: 18rem">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <%= s.skill%>
+                    </h5>
+                  
+
+                    <a href="/delete-skill/<%= i%>" class="card-link">Remove</a>
+                </div>
+            </div>
+            <% })%>
+ </div>
+
+    <%- include('../../partials/footer')%>
